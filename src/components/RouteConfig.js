@@ -1,5 +1,6 @@
 import React from 'react';
 import Anasayfa from './Pages/Anasayfa/Anasayfa';
+import Rehber from './Pages/Rehber/Rehber';
 
 export const routes = [
   {
@@ -13,7 +14,7 @@ export const routes = [
   {
     name: 'Rehber',
     path: '/Rehber',
-    component: Anasayfa,
+    component: Rehber,
     sidebar: () => <span>Rehber</span>,
     icon: 'flaticon-network',
   },
