@@ -20,7 +20,9 @@ class CardImage extends Component {
   render() {
     //console.log('dolduuu ' + this.state.res);
     if (!this.state.res) {
-      return <h4>Loading</h4> /*<img width="96px" height="96px" src={loadgif} alt={''} />*/;
+      return (
+        <strong>Resim Loading</strong> /*<img width="96px" height="96px" src={loadgif} alt={''} />*/
+      );
     }
     return <CardImg width={this.props.width} src={this.state.res} alt="Card image cap" />;
   }
