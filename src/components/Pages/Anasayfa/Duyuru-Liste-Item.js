@@ -1,5 +1,16 @@
 import React, { Component } from 'react';
-import { stat } from 'fs';
+import {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  Button,
+} from 'reactstrap';
+import { createDecipher } from 'crypto';
 
 class DuyuruListeItem extends Component {
   constructor(props) {
@@ -8,6 +19,11 @@ class DuyuruListeItem extends Component {
   }
 
   render() {
-    return <div />;
+    const crd = props.item;
+    return;
+    <Card>
+      <CardHeader>{crd.baslik}</CardHeader>
+      <CardFooter>&nbsp;</CardFooter>
+    </Card>;
   }
 }

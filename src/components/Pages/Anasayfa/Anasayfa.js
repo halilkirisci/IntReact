@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import DuyuruListe from './Duyuru-Liste';
 
 class Anasayfa extends Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class Anasayfa extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col md="8">&nbsp;asdasda</Col>
+          <Col md="8">
+            <DuyuruListe />
+          </Col>
           <Col md="4">&nbsp;asdasdas</Col>
         </Row>
       </Container>
