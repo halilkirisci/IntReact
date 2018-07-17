@@ -1,5 +1,5 @@
 import React from 'react';
-import Anasayfa from './Pages/Anasayfa';
+import Anasayfa from './Pages/Anasayfa/Anasayfa';
 
 export const routes = [
   {
