@@ -18,7 +18,7 @@ export default class InputAsync extends Component {
   render() {
     return (
       <AsyncTypeahead
-        //className="form-control form-control-dark w-100"
+        className="w-100"
         isLoading={this.state.isLoading}
         caseSensitive
         ignoreDiacritics={false}

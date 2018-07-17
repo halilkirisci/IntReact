@@ -52,8 +52,8 @@ export default class Navigation extends React.Component {
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
+                <DropdownToggle className="text-nowrap" nav caret>
+                  Menü
                 </DropdownToggle>
                 <DropdownMenu right>
                   {this.props.menu.map((route, i) => (

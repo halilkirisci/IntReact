@@ -1,3 +1,7 @@
-body{
-    background:white;
+body {
+  background: white;
+}
+
+#root {
+  margin-top: 67px;
 }
