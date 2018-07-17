@@ -10,14 +10,14 @@ export const routes = [
     sidebar: () => <span>Anasayfa</span>,
     icon: 'flaticon-open-box',
   },
-  /*{
+  {
     name: 'Rehber',
     path: '/Rehber',
-    component: Rehber,
+    component: Anasayfa,
     sidebar: () => <span>Rehber</span>,
     icon: 'flaticon-network',
   },
-  {
+  /* {
     name: 'Test',
     path: '/test',
     component: Test,

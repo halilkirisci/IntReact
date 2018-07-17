@@ -55,6 +55,8 @@ export default class Navigation extends React.Component {
                   Options
                 </DropdownToggle>
                 <DropdownMenu right>
+                  {this.props.menu.map((route, i) => <DropdownItem>{route.name}</DropdownItem>)}
+
                   <DropdownItem>Option 1</DropdownItem>
                   <DropdownItem>Option 2</DropdownItem>
                   <DropdownItem divider />

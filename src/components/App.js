@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <Navigation />
+          <Navigation menu={yol.routes} />
           <Container>
             <h4>
               {yol.routes.map((route, i) => (

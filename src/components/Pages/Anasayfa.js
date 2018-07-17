@@ -11,16 +11,6 @@ class Anasayfa extends Component {
   render() {
     return (
       <Container fluid>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
         <Row>
           <Col md="8">&nbsp;asdasda</Col>
           <Col md="4">&nbsp;asdasdas</Col>
@@ -29,3 +19,4 @@ class Anasayfa extends Component {
     );
   }
 }
+export default Anasayfa;
