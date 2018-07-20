@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import DuyuruListe from './Duyuru-Liste';
 import DogumGunu from './DogumGunu';
 import GunlukYemek from '../Yemek/Gunluk-Yemek';
+import DuyuruDetay from './Duyuru-Detay';
 
 class Anasayfa extends Component {
   constructor(props) {
@@ -18,6 +19,8 @@ class Anasayfa extends Component {
           <DuyuruListe />
         </Col>
         <Col md="4">
+          <DuyuruDetay />
+          <hr />
           <DogumGunu />
           <hr />
           <GunlukYemek key={'gy'} />

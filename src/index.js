@@ -11,6 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-keyed-file-browser/dist/react-keyed-file-browser.css';
 import 'react-keyed-file-browser/dist/react-keyed-file-browser.css';
 import './assets/fontawesome/css/fontawesome.min.css';
+import '@fancyapps/fancybox/dist/jquery.fancybox.css';
+import '@fancyapps/fancybox/dist/jquery.fancybox.js';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 const store = createStoreWithMiddleware(

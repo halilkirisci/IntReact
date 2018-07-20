@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { CardImg } from 'reactstrap';
 
+//import '@fancyapps/fancybox/lib/fancybox.css';
+
 class CardImage extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,13 @@ class CardImage extends Component {
         <strong>Resim Loading</strong> /*<img width="96px" height="96px" src={loadgif} alt={''} />*/
       );
     }
-    return <img src={this.state.res} alt="Card image cap" />;
+
+    return (
+      <a data-fancybox="gallery" href={this.state.res}>
+        <img src={this.state.res} />
+      </a>
+    );
+    //return <img src={this.state.res} alt="Card image cap" />;
     //return <CardImg width={this.props.width} src={this.state.res} alt="Card image cap" />;
   }
 }

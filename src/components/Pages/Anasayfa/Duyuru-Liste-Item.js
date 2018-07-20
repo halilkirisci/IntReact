@@ -17,6 +17,7 @@ import Moment from 'moment';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { runInDebugContext } from 'vm';
 
 library.add(faEye);
 
@@ -34,18 +35,31 @@ export default class DuyuruListeItem extends Component {
         <CardImg
           top
           width="100%"
-          src="https://image.freepik.com/free-vector/abstract-design-background_1048-6726.jpg"
+          src="https://i0.wp.com/benuestate.gov.ng/wp-content/uploads/2017/11/background.jpg?ssl=1"
           alt="Card image cap"
         />
         <CardImgOverlay>
-          <strong>{crd.baslik}</strong>
+          <a
+            href="javascript:;"
+            data-fancybox={'_duyuruDetay' + crd.duyuruID}
+            data-src={'#duyuruDetay' + crd.duyuruID}
+          >
+            <strong>{crd.baslik}</strong>
+          </a>
+
           <br />
-          <small>{Moment(crd.basTarih).format('DD.MM.YYYY')}</small>
-          <br />
-          <Badge pill color="primary">
-            <FontAwesomeIcon icon="eye" />&nbsp;
-            {crd.T_DUYURU_TIKLAMA.length}
-          </Badge>
+          <div>
+            <small className="float-right">{Moment(crd.basTarih).format('DD.MM.YYYY')}</small>
+
+            <Badge pill color="primary">
+              <FontAwesomeIcon icon="eye" />&nbsp;
+              {crd.T_DUYURU_TIKLAMA.length}
+            </Badge>
+          </div>
+          <div id={'duyuruDetay' + crd.duyuruID} className="w-75" style={{ display: 'none' }}>
+            <h3>{crd.baslik}</h3>
+            <p dangerouslySetInnerHTML={{ __html: crd.icerik }} />
+          </div>
         </CardImgOverlay>
       </Card>
     );
