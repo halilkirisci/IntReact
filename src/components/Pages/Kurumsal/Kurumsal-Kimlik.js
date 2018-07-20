@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FileBrowserim from '../../Parts/FileBrowserim';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default class KurumsalKimlik extends Component {
   constructor(props) {

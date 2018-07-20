@@ -10,9 +10,15 @@ import {
   CardTitle,
   CardSubtitle,
   Button,
+  Badge,
 } from 'reactstrap';
 import Moment from 'moment';
-import { createDecipher } from 'crypto';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faEye);
 
 export default class DuyuruListeItem extends Component {
   constructor(props) {
@@ -22,6 +28,7 @@ export default class DuyuruListeItem extends Component {
 
   render() {
     const crd = this.props.item;
+    console.log(crd);
     return (
       <Card>
         <CardImg
@@ -31,9 +38,14 @@ export default class DuyuruListeItem extends Component {
           alt="Card image cap"
         />
         <CardImgOverlay>
-          {crd.baslik}
+          <strong>{crd.baslik}</strong>
           <br />
           <small>{Moment(crd.basTarih).format('DD.MM.YYYY')}</small>
+          <br />
+          <Badge pill color="primary">
+            <FontAwesomeIcon icon="eye" />&nbsp;
+            {crd.T_DUYURU_TIKLAMA.length}
+          </Badge>
         </CardImgOverlay>
       </Card>
     );
