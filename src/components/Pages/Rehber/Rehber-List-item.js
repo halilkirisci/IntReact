@@ -18,14 +18,14 @@ const RehberListItem = props => {
 
   return (
     <Card>
-      <CardImage key={kisi.KOD} kod={kisi.KOD} />
-      <CardImgOverlay>
+      <CardImage key={kisi.KOD} kod={kisi.KOD} width="100%" />
+      <CardBody>
         {kisi.PERSONEL_AD} {kisi.SOYAD}
         <p>
           {kisi.FİİLİ_GÖREV_YERİ}
           <br /> {kisi.İş_Tel}
         </p>
-      </CardImgOverlay>
+      </CardBody>
     </Card>
   );
 };

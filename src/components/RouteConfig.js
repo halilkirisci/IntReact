@@ -1,6 +1,9 @@
 import React from 'react';
 import Anasayfa from './Pages/Anasayfa/Anasayfa';
 import Rehber from './Pages/Rehber/Rehber';
+import KurumsalDokuman from './Pages/Kurumsal/Kurumsal-Dokuman';
+import KurumsalKimlik from './Pages/Kurumsal/Kurumsal-Kimlik';
+import Yemek from './Pages/Yemek/Haftalik-Yemek';
 
 export const routes = [
   {
@@ -18,21 +21,28 @@ export const routes = [
     sidebar: () => <span>Rehber</span>,
     icon: 'flaticon-network',
   },
-  /* {
-    name: 'Test',
-    path: '/test',
-    component: Test,
-    sidebar: () => <span>Test</span>,
+  {
+    name: 'Kurumsal Döküman',
+    path: '/kdokuman',
+    component: KurumsalDokuman,
+    sidebar: () => <span>Kurumsal Döküman</span>,
     icon: 'flaticon-layers',
   },
   {
-    name: 'Yemek',
-    path: '/yemek',
-    component: Yemek,
-    sidebar: () => <span>Yemek</span>,
-    icon: 'flaticon-share',
+    name: 'Kurumsal Kimlik',
+    path: '/kkimlik',
+    component: KurumsalKimlik,
+    sidebar: () => <span>Kurumsal Kimlik</span>,
+    icon: 'flaticon-layers',
   },
   {
+    name: 'Yemek Listesi',
+    path: '/yemek',
+    component: Yemek,
+    sidebar: () => <span>Haftalık Yemek Listesi</span>,
+    icon: 'flaticon-share',
+  },
+  /*{
     name: 'Test-Yeni',
     path: '/testyeni',
     component: TestYeni,

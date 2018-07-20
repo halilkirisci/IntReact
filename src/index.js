@@ -8,6 +8,9 @@ import reducers from './reducers';
 
 import './style/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-keyed-file-browser/dist/react-keyed-file-browser.css';
+import 'react-keyed-file-browser/dist/react-keyed-file-browser.css';
+import './assets/fontawesome/css/fontawesome.min.css';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 const store = createStoreWithMiddleware(

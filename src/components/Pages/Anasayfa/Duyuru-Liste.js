@@ -22,7 +22,7 @@ export default class DuyuruListe extends Component {
     }
     return (
       <CardColumns>
-        {this.state.duyurular.map((duyuru, i) => <DuyuruListeItem item={duyuru} />)}
+        {this.state.duyurular.map((duyuru, i) => <DuyuruListeItem key={'dy' + i} item={duyuru} />)}
       </CardColumns>
     );
   }
