@@ -24,7 +24,8 @@ class CardImage extends Component {
         <strong>Resim Loading</strong> /*<img width="96px" height="96px" src={loadgif} alt={''} />*/
       );
     }
-    return <CardImg width={this.props.width} src={this.state.res} alt="Card image cap" />;
+    return <img src={this.state.res} alt="Card image cap" />;
+    //return <CardImg width={this.props.width} src={this.state.res} alt="Card image cap" />;
   }
 }
 export default CardImage;

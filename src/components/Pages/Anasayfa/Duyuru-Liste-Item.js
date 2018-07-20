@@ -11,6 +11,7 @@ import {
   CardSubtitle,
   Button,
 } from 'reactstrap';
+import Moment from 'moment';
 import { createDecipher } from 'crypto';
 
 export default class DuyuruListeItem extends Component {
@@ -29,7 +30,11 @@ export default class DuyuruListeItem extends Component {
           src="https://image.freepik.com/free-vector/abstract-design-background_1048-6726.jpg"
           alt="Card image cap"
         />
-        <CardImgOverlay>{crd.baslik}</CardImgOverlay>
+        <CardImgOverlay>
+          {crd.baslik}
+          <br />
+          <small>{Moment(crd.basTarih).format('DD.MM.YYYY')}</small>
+        </CardImgOverlay>
       </Card>
     );
   }

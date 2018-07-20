@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import _ from 'lodash';
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
 
-class GunlukYemek extends Component {
+export default class GunlukYemek extends Component {
   constructor(props) {
     super(props);
+    const metin = '';
     this.state = {
       events: [],
     };
@@ -21,26 +21,29 @@ class GunlukYemek extends Component {
     if (this.state.events.length == 0) {
       return <strong>Yemek Yükleniyor</strong>;
     }
-    console.log(JSON.stringify(this.state.events));
+
     return (
       <div id="dd">
-        {_.map(this.state.events, (o, i) => {
-          {
-            console.log(o.title);
-            <span>{JSON.stringify(o)}</span>;
-          }
-        })}
-        {this.state.events.map((o, i) => {
-          <span>ali</span>;
-        })}
         <ListGroup key={'ddk'}>
-          {this.state.events.map((o, i) => {
-            <ListGroupItem key={'gy' + i}>{o.title}</ListGroupItem>;
-          })}
+          {this.state.events.map((o, i) => (
+            <ListGroupItem
+              key={'gy' + i}
+              className="d-flex justify-content-between align-items-center"
+            >
+              {o.title.split('|').map(
+                (p, j) =>
+                  j == 0 ? (
+                    p
+                  ) : (
+                    <Badge pill color="primary">
+                      {p}
+                    </Badge>
+                  ),
+              )}
+            </ListGroupItem>
+          ))}
         </ListGroup>
       </div>
     );
   }
 }
-
-export default GunlukYemek;

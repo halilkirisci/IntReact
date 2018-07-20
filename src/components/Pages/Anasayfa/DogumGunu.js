@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   Card,
   CardDeck,
+  CardGroup,
   CardHeader,
   CardFooter,
   CardImg,
@@ -51,9 +52,12 @@ class DogumGunu extends Component {
       <CardDeck>
         {this.state.doganlar.map((dogan, index) => (
           <Card key={'Card' + index}>
-            <CardImage key={'dogan' + dogan.KOD} kod={dogan.KOD} width="80px" />
-            <CardBody>
-              {dogan.PERSONEL_AD} {dogan.SOYAD} {dogan.İş_Tel}
+            <div className="text-center bg-secondary">
+              <CardImage key={'dogan' + dogan.KOD} kod={dogan.KOD} width="80px" />
+            </div>
+            <CardBody className=" text-center">
+              {dogan.PERSONEL_AD} {dogan.SOYAD}
+              <br /> {dogan.İş_Tel}
             </CardBody>
           </Card>
         ))}

@@ -10,7 +10,7 @@ export default class DuyuruListe extends Component {
   }
 
   componentDidMount = () => {
-    fetch('http://172.17.4.29/intapi/api/Duyuru?basT=01.06.2018&bitT=06.07.2018')
+    fetch('http://172.17.4.29/intapi/api/DuyuruGuncel')
       .then(response => response.json())
       .then(duyurular => this.setState({ duyurular }))
       .catch(error => console.log('hata', error));
