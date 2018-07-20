@@ -20,7 +20,7 @@ class Anasayfa extends Component {
         <Col md="4">
           <DogumGunu />
           <hr />
-          <GunlukYemek />
+          <GunlukYemek key={'gy'} />
         </Col>
       </Row>
     );

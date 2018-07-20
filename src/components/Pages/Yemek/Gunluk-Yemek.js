@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import { ListGroup, ListGroupItem } from 'reactstrap';
 
 class GunlukYemek extends Component {
@@ -22,14 +23,22 @@ class GunlukYemek extends Component {
     }
     console.log(JSON.stringify(this.state.events));
     return (
-      <ListGroup>
-        {this.state.events.map((o, i) => {
-          console.log(JSON.stringify(o));
-          <ListGroupItem key={'gy' + i} className="justify-content-between">
-            {o.title}
-          </ListGroupItem>;
+      <div id="dd">
+        {_.map(this.state.events, (o, i) => {
+          {
+            console.log(o.title);
+            <span>{JSON.stringify(o)}</span>;
+          }
         })}
-      </ListGroup>
+        {this.state.events.map((o, i) => {
+          <span>ali</span>;
+        })}
+        <ListGroup key={'ddk'}>
+          {this.state.events.map((o, i) => {
+            <ListGroupItem key={'gy' + i}>{o.title}</ListGroupItem>;
+          })}
+        </ListGroup>
+      </div>
     );
   }
 }
