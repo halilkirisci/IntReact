@@ -27,7 +27,7 @@ export default class InputAsync extends Component {
         labelKey={option => `${option.KOD}`}
         onSearch={query => {
           this.setState({ isLoading: true });
-          fetch(`http://172.17.4.29/intapi/api/Kisi/${query}`)
+          fetch(`http://172.17.4.29/iwwa/api/user?search=${query}`)
             .then(resp => resp.json())
             .then(json =>
               this.setState({

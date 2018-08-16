@@ -19,9 +19,12 @@ class Anasayfa extends Component {
           <DuyuruListe />
         </Col>
         <Col md="4">
-          <DuyuruDetay />
+          <strong>Doğum Günü</strong>
           <hr />
           <DogumGunu />
+          <br />
+
+          <strong>Günlük Yemek</strong>
           <hr />
           <GunlukYemek key={'gy'} />
         </Col>

@@ -11,7 +11,7 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <Navigation menu={yol.routes} />
-          <Container fluid>
+          <Container>
             <h4>
               {yol.routes.map((route, i) => (
                 <Route key={i} path={route.path} exact={route.exact} component={route.sidebar} />

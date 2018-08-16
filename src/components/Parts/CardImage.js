@@ -12,7 +12,9 @@ class CardImage extends Component {
 
   componentDidMount = () => {
     fetch(
-      'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=80&height=80',
+      //'http://172.17.4.29/intapi/api/ResimBase64/?kod=' + this.props.kod + '&width=80&height=80',
+      //'http://172.17.4.29/iwwa/api/user/vesikalik/base64?kod=' + this.props.kod,
+      'http://172.17.4.29/iwwa/api/user/vesikalik?kod=' + this.props.kod,
     )
       .then(response => response.json())
       .then(res => this.setState({ res }))
@@ -29,7 +31,7 @@ class CardImage extends Component {
 
     return (
       <a data-fancybox="gallery" href={this.state.res}>
-        <img src={this.state.res} />
+        <img src={this.state.res} style={{ width: '80px' }} />
       </a>
     );
     //return <img src={this.state.res} alt="Card image cap" />;

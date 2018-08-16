@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../../Parts/SearchBar';
 import RehberList from './Rehber-List';
+import Skeleton from 'react-skeleton-loader';
 
 class Rehber extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Rehber extends Component {
   }
 
   GetKisi(anahtar) {
-    fetch(`http://172.17.4.29/intapi/api/Kisi/${anahtar}`)
+    fetch(`http://172.17.4.29/iwwa/api/user?search=${anahtar}`)
       .then(response => response.json())
       .then(kisiler => this.setState({ kisiler }))
       .catch(error => console.log('hata', error));
@@ -24,7 +25,11 @@ class Rehber extends Component {
     return (
       <div className="container-fluid">
         <SearchBar onAraClick={this.GetKisi} />
-        <RehberList key="RehberListe" kisiler={this.state.kisiler} />
+        {this.state.kisiler != null ? (
+          <RehberList key="RehberListe" kisiler={this.state.kisiler} />
+        ) : (
+          <Skeleton />
+        )}
       </div>
     );
   }
